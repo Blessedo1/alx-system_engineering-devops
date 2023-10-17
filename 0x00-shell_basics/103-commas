@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -p -A1 | LC_ALL=C sort --ignore-leading-blanks | tr '\n' ','
