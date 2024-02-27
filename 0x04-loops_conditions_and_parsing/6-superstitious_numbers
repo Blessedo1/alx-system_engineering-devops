@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# script displays numbers 1 to 20 and 4, 9, 17 represented by "bad luck from China", "bad luck from Japan" and "bad luck from Italy" respectively
+i=1
+while [ $i -le 20 ]; do
+	echo $i
+	if [ $i -eq 4 ]; then
+		echo "bad luck from China"
+	elif [ $i -eq 9 ]; then
+                echo "bad luck from Japan"
+	elif [ $i -eq 17 ]; then
+                echo "bad luck from Italy"
+	fi
+	i=$((i+1))
+done
