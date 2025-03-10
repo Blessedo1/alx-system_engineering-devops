@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#run apache on a designated container and insert a certain text at the root
+service apache2 start
+echo "Hello ALX" > /var/www/html/index.html
