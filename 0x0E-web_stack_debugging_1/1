@@ -1,0 +1,4 @@
+ERROR: Could not find a profile matching 'Nginx HTTP'
+tee: /etc/nginx/sites-available/default: No such file or directory
+Failed to restart nginx.service: Interactive authentication required.
+See system logs and 'systemctl status nginx.service' for details.
