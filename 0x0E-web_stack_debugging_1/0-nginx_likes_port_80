@@ -7,4 +7,5 @@ server {
     listen 80;
 }
 EOF
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 service nginx restart
