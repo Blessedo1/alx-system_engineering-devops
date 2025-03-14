@@ -7,5 +7,6 @@ server {
     listen 8080;
 }
 EOF
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 sudo chown -R nginx:nginx /var/www/html
 sudo service nginx restart
