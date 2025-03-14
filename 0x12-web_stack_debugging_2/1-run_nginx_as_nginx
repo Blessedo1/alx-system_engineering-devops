@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 # Fix this container so that Nginx is running as the nginx user.
 sudo ufw allow 8080/tcp
-sudo tee /etc/nginx/nginx.conf > /dev/null <<EOF
-user nginx;
+sudo sed -i 's/^user .*/user nginx;/' /etc/nginx/nginx.conf
+sudo tee /etc/nginx/sites-available/default > /dev/null <<EOF
+server {
+    listen 8080;
+}
 EOF
+SUDO chown -R nginx:nginx /var/www/html
 sudo service nginx restart
