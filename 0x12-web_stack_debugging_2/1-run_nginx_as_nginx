@@ -9,4 +9,5 @@ server {
 EOF
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 sudo chown -R nginx:nginx /var/www/html
+pkill apache2
 sudo service nginx restart
