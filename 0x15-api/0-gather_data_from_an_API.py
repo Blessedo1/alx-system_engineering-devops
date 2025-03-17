@@ -8,8 +8,8 @@ if __name__ == "__main__":
     user = requests.get(url + "users/{}".format(sys.argv[1])).json()
     todos = requests.get(url + "todos", params={"userId": sys.argv[1]}).json()
 
+    completed = 0
     for i in todos:
-        completed = 0
         if i.get("completed") is True:
             completed += 1
     print("Employee {} is done with tasks({}/{}):".format(
