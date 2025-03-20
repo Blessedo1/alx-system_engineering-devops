@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Returns to-do list information for all employees and exports data to JSON."""
+"""Returns to-do list information of all employees and exports data to JSON."""
 import json
 import requests
 
@@ -13,7 +13,7 @@ if __name__ == "__main__":
         user_id = i.get("id")
         username = i.get("username")
         all_tasks[user_id] = []
-        
+
         for j in todos:
             if j.get("userId") == user_id:
                 all_tasks[user_id].append({
