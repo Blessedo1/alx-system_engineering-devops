@@ -8,6 +8,7 @@ if __name__ == "__main__":
     users = requests.get(url + "users").json()
     todos = requests.get(url + "todos").json()
 
+    all_tasks = {}
     for i in users:
         user_id = i.get("id")
         username = i.get("username")
@@ -21,5 +22,5 @@ if __name__ == "__main__":
                     "completed": j.get("completed")
                     })
 
-    with open(todo_all_employees.json, mode='w') as file:
+    with open("todo_all_employees.json", mode='w') as file:
         json.dump(all_tasks, file)
