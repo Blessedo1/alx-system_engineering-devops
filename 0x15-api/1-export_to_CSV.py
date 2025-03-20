@@ -13,7 +13,9 @@ if __name__ == "__main__":
     with open("{}.csv".format(sys.argv[1]), mode='w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for i in todos:
-            writer.writerow([sys.argv[1], username, i.get("completed"), i.get("title")])
+            writer.writerow(
+                    [sys.argv[1], username, i.get("completed"), i.get("title")]
+                    )
 
     completed = 0
     for i in todos:
