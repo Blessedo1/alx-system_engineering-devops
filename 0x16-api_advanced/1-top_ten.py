@@ -7,9 +7,9 @@ def top_ten(subreddit):
     """Print the titles of the first 10 hottest posts on a given subreddit."""
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {"User-Agent": "custom"}
-    params = {"limit": 10}
+    param = {"limit": 10}
 
-    r = requests.get(url, headers=headers, params=params, allow_redirects=False)
+    r = requests.get(url, headers=headers, params=param, allow_redirects=False)
 
     if r.status_code == 200:
         data = r.json()
